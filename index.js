@@ -16,4 +16,6 @@ app.get("/", (req, res) => {
   Response(req, res, 200, "Cookie&Soda");
 });
 
+app.use("/api", require("./routes/server.routes"));
+
 app.listen(app.get("port"));
