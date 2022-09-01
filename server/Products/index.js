@@ -15,6 +15,7 @@ async function getAllProducts(req, res) {
     Response(req, res, 500, error.message);
   }
 }
+
 async function getSingleProduct(req, res) {
   try {
     const products = await knex("products").where("id", req.params.id);
