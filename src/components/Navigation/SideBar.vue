@@ -7,7 +7,7 @@
     flat
     app
   >
-    <v-list flat class="mt-4" v-if="User">
+    <v-list flat class="mt-4" v-if="GET_USER">
       <v-list-item-group v-model="selectedItem">
         <v-list-item
           v-for="(item, i) in topItems"

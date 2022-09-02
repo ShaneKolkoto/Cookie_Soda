@@ -20,7 +20,9 @@
       class="mr-2 mt-1"
       v-if="!GET_USER"
     >
-      <v-btn class="white--text" color="error" depressed>Login</v-btn>
+      <v-btn class="white--text" color="error" depressed @click="Login"
+        >Login</v-btn
+      >
     </v-badge>
 
     <v-badge
@@ -31,19 +33,24 @@
       class="mr-2 mt-1"
       v-else
     >
-      <v-btn class="white--text" color="success" depressed>Logout</v-btn>
+      <v-btn class="white--text" color="success" depressed @click="Logout"
+        >Logout</v-btn
+      >
     </v-badge>
   </v-app-bar>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 export default {
   data() {
     return {};
   },
   computed: {
     ...mapGetters("user", ["GET_USER"]),
+  },
+  methods: {
+    ...mapActions("user", ["Login", "Logout"]),
   },
 };
 </script>
