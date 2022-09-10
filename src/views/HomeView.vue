@@ -1,8 +1,12 @@
 <template>
   <v-app>
-    <Navbar />
-    <SideBar />
-    <v-container fluid>
+    <Header />
+    <Content />
+    <br />
+    <BottomNav />
+    <!-- <Navbar /> -->
+    <!-- <SideBar /> -->
+    <!-- <v-container fluid>
       <HeaderSlider />
       <v-toolbar flat color="transparent" class="mt-8">
         <v-toolbar-title class="text-h6">Our Trusted Partner</v-toolbar-title>
@@ -46,28 +50,30 @@
         </v-row>
       </v-card>
     </v-container>
-    <FooterCom />
+    <FooterCom /> -->
   </v-app>
 </template>
 
 <script>
-import Navbar from "@/components/Navigation/NavBar.vue";
-import SideBar from "@/components/Navigation/SideBar.vue";
-import HeaderSlider from "@/components/Header/HeaderView.vue";
-import PartnerView from "@/components/PartnerView.vue";
-import FooterCom from "@/components/Header/FooterCom.vue";
+import BottomNav from "@/components/Navigation/BottomNav.vue";
+// import SideBar from "@/components/Navigation/SideBar.vue";
+import Header from "@/components/Header/HeaderView.vue";
+// import PartnerView from "@/components/PartnerView.vue";
+import Content from "@/components/ContentView.vue";
+// import BottomNav from "@/components/Header/FooterNav.vue";
 
 export default {
   name: "HomeView",
   data: () => ({
-    toggle_exclusive: 1,
+    // toggle_exclusive: 1,
   }),
   components: {
-    Navbar,
-    SideBar,
-    HeaderSlider,
-    PartnerView,
-    FooterCom,
+    // SideBar,
+    Header,
+    Content,
+    // PartnerView,
+    // Footer,
+    BottomNav,
   },
 };
 </script>

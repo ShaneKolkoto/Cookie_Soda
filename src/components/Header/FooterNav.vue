@@ -1,5 +1,5 @@
 <template>
-  <v-footer dark padless>
+  <v-footer app bottom fixed padless>
     <v-card flat tile class="black white--text py-12 px-5" width="100%">
       <v-row>
         <v-col cols="12" xs="12" sm="6" md="4" class="pa-16">
@@ -63,6 +63,8 @@
 <script>
 export default {
   data: () => ({
+    value: "music",
+    color: "purple accent-4",
     icons: [
       "fab fa-apple",
       "fab fa-google-plus-g",

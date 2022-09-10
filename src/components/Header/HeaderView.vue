@@ -1,5 +1,12 @@
 <template>
-  <v-container fluid>
+  <v-container app fluid>
+    <div class="text-center">
+      <v-row>
+        <v-col class="12">Cookie&Soda</v-col>
+      </v-row>
+    </div>
+  </v-container>
+  <!-- <v-container fluid>
     <v-row>
       <v-col cols="12">
         <v-card class="mx-auto rounded-xl" flat>
@@ -28,15 +35,15 @@
         </v-card>
       </v-col>
     </v-row>
-  </v-container>
+  </v-container> -->
 </template>
 
 <script>
-import SliderView from "@/components/SliderView.vue";
+// import SliderView from "@/components/SliderView.vue";
 export default {
   name: "header-view",
   components: {
-    SliderView,
+    // SliderView,
   },
 };
 </script>
