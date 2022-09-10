@@ -1,14 +1,22 @@
 <template>
   <v-row align="center" justify="center">
     <v-slide-group v-model="model" class="pa-1 slider-group" center-active>
-      <v-slide-item v-for="category in GET_CATEGORY" :key="category.id">
+      <v-slide-item
+        v-for="category in GET_CATEGORY"
+        :key="category.id"
+        v-slot="{ active, toggle }"
+      >
         <v-row class="mx-4 mt-2">
           <div class="mx-auto d-flex flex-row">
-            <div class="d-flex flex-column text-center">
+            <div
+              class="d-flex flex-column text-center"
+              :color="active ? undefined : 'blue lighten-1'"
+              @click="toggle"
+            >
               <v-avatar color="#877787" size="50"
                 ><v-img align="center" :src="category.img"></v-img>
               </v-avatar>
-              <span class="caption grey--text">{{ category.category }}</span>
+              <span class="caption black--text">{{ category.category }}</span>
             </div>
           </div>
         </v-row>
@@ -20,6 +28,7 @@
 <script>
 import { mapGetters } from "vuex";
 export default {
+  name: "circle-category",
   data() {
     return {
       model: null,
