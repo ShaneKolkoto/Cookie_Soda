@@ -11,7 +11,7 @@
           max-height="200"
           min-height="200"
           class="white--text align-end"
-          :src="card.img"
+          :src="card.img[0].img"
         >
           <v-card-title class="card-title"
             >Shop {{ card.category }}</v-card-title

@@ -10,7 +10,7 @@
           <div class="mx-auto d-flex flex-row">
             <div class="d-flex flex-column text-center" @click="toggle">
               <v-avatar color="#877787" size="50"
-                ><v-img align="center" :src="category.img"></v-img>
+                ><v-img align="center" :src="category.img[0].img"></v-img>
               </v-avatar>
               <span class="caption black--text">{{ category.category }}</span>
             </div>

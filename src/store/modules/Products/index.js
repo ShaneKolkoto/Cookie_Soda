@@ -5,7 +5,29 @@ export default {
       {
         id: 1,
         category: "Woman",
-        img: "/img/category/woman.jpg",
+        img: [
+          {
+            id: 1,
+
+            img: "/img/category/woman.jpg",
+            color: "red",
+          },
+          {
+            id: 2,
+            img: "/img/category/summer.jpg",
+            color: "blue",
+          },
+          {
+            id: 3,
+            img: "/img/category/men.png",
+            color: "pink",
+          },
+          {
+            id: 4,
+            img: "/img/category/kid.jpg",
+            color: "black",
+          },
+        ],
         title: "Product 1",
         price: 350,
         amountSold: 10,
@@ -31,7 +53,30 @@ export default {
       {
         id: 2,
         category: "Men",
-        img: "/img/category/men.png",
+        img: [
+          {
+            id: 1,
+            img: "/img/category/men.png",
+
+            color: "red",
+          },
+          {
+            id: 2,
+            img: "/img/category/summer.jpg",
+            color: "blue",
+          },
+          {
+            id: 3,
+            img: "/img/category/woman.jpg",
+
+            color: "pink",
+          },
+          {
+            id: 4,
+            img: "/img/category/kid.jpgg",
+            color: "black",
+          },
+        ],
         title: "Product 2",
         price: 200,
         amountSold: 2,
@@ -39,7 +84,30 @@ export default {
       {
         id: 3,
         category: "Kids",
-        img: "/img/category/kid.jpg",
+        img: [
+          {
+            id: 1,
+            img: "/img/category/kid.jpg",
+
+            color: "red",
+          },
+          {
+            id: 2,
+            img: "/img/category/summer.jpg",
+            color: "blue",
+          },
+          {
+            id: 3,
+            img: "/img/category/woman.jpg",
+
+            color: "pink",
+          },
+          {
+            id: 4,
+            img: "/img/category/men.png",
+            color: "black",
+          },
+        ],
         title: "Product 3",
         price: 400,
         amountSold: 5,
@@ -65,7 +133,30 @@ export default {
       {
         id: 4,
         category: "Accessories",
-        img: "/img/category/men.png",
+        img: [
+          {
+            id: 1,
+            img: "/img/category/summer.jpg",
+
+            color: "red",
+          },
+          {
+            id: 2,
+            img: "/img/category/woman.jpg",
+
+            color: "blue",
+          },
+          {
+            id: 3,
+            img: "/img/category/men.png",
+            color: "pink",
+          },
+          {
+            id: 4,
+            img: "/img/category/kid.jpg",
+            color: "black",
+          },
+        ],
         title: "Product 4",
         price: 350,
         amountSold: 25,
@@ -91,7 +182,29 @@ export default {
       {
         id: 5,
         category: "Summer",
-        img: "/img/category/summer.jpg",
+        img: [
+          {
+            id: 1,
+            img: "/img/category/men.png",
+
+            color: "red",
+          },
+          {
+            id: 2,
+            img: "/img/category/summer.jpg",
+            color: "blue",
+          },
+          {
+            id: 3,
+            color: "pink",
+            img: "/img/category/woman.jpg",
+          },
+          {
+            id: 4,
+            img: "/img/category/kid.jpg",
+            color: "black",
+          },
+        ],
         title: "Product 5",
         price: 30,
         amountSold: 100,
@@ -117,7 +230,28 @@ export default {
       {
         id: 6,
         category: "Winter",
-        img: "/img/category/woman.jpg",
+        img: [
+          {
+            id: 1,
+            img: "/img/category/woman.jpg",
+            color: "red",
+          },
+          {
+            id: 2,
+            img: "/img/category/summer.jpg",
+            color: "blue",
+          },
+          {
+            id: 3,
+            img: "/img/category/men.png",
+            color: "pink",
+          },
+          {
+            id: 4,
+            img: "/img/category/kid.jpg",
+            color: "black",
+          },
+        ],
         title: "Product 6",
         price: 350,
         amountSold: 1,
@@ -143,7 +277,30 @@ export default {
       {
         id: 7,
         category: "Deals",
-        img: "/img/category/men.png",
+        img: [
+          {
+            id: 1,
+            img: "/img/category/kid.jpg",
+
+            color: "red",
+          },
+          {
+            id: 2,
+            img: "/img/category/summer.jpg",
+            color: "blue",
+          },
+          {
+            id: 3,
+            img: "/img/category/men.png",
+            color: "pink",
+          },
+          {
+            id: 4,
+            img: "/img/category/woman.jpg",
+
+            color: "black",
+          },
+        ],
         title: "Product 7",
         price: 250,
         amountSold: 20,
