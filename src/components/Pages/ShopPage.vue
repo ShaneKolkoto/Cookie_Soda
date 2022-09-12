@@ -10,7 +10,7 @@
           max-height="80px"
           max-width="80px"
           class="ml-auto"
-          :src="category.img"
+          :src="category.img[0].img"
         />
       </v-col>
       <div class="underline"></div>

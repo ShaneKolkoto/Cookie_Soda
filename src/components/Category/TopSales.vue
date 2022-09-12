@@ -11,28 +11,27 @@
           <v-card
             class="ma-2 align-center"
             max-width="150"
-            min-height="100"
+            min-height="150"
             :color="active ? 'white' : 'white lighten-1'"
             @click="toggle"
           >
-            <v-img class="ma-3" height="80px" width="90px" :src="sale.img">
-            </v-img>
-
-            <v-card-subtitle
-              class="pb-0"
-              v-for="color in sale.colors"
-              :key="color.id"
+            <v-img
+              class="ma-3"
+              height="130px"
+              width="120px"
+              :src="img || sale.img[0].img"
             >
-              <v-row class="">
-                <v-col cols="3" class="">
-                  <v-btn
-                    max-width="10px"
-                    height="20px"
-                    :color="color.color"
-                    @click="getColor(color)"
-                  ></v-btn>
-                </v-col>
-              </v-row>
+            </v-img>
+            <v-divider class="mx-4"></v-divider>
+            <v-card-subtitle class="">
+              <v-icon
+                class="pa-1"
+                v-for="color in sale.colors"
+                :key="color.id"
+                :color="color.color"
+                @click="setImage(color.color, sale)"
+                >fa-thin fa-square</v-icon
+              >
             </v-card-subtitle>
 
             <v-card-text class="text--primary">
@@ -53,32 +52,19 @@ export default {
   data() {
     return {
       model: null,
-      shops: [
-        { img: "airbnb.png" },
-        { img: "adidas.png" },
-        { img: "swords.png" },
-        { img: "castle.png" },
-      ],
       toggle_one: 0,
+      img: null,
     };
   },
   computed: {
     ...mapGetters("products", ["GET_SALER"]),
-    swatchStyle() {
-      const { color, menu } = this;
-      return {
-        backgroundColor: color,
-        cursor: "pointer",
-        height: "30px",
-        width: "30px",
-        borderRadius: menu ? "50%" : "4px",
-        transition: "border-radius 200ms ease-in-out",
-      };
-    },
   },
   methods: {
-    getColor(color) {
-      console.log(color);
+    setImage: function (color, item) {
+      const filteredImg = item.img.filter((product) => {
+        return product.color === color;
+      });
+      this.img = filteredImg[0].img;
     },
   },
 };
