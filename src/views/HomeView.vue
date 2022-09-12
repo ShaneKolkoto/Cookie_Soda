@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app class="landing">
     <BottomNav />
     <Header :name="GET_PAGE" />
     <HomePage v-if="GET_PAGE.to === '/' || GET_PAGE === '/'" />
@@ -41,4 +41,8 @@ export default {
   },
 };
 </script>
-<style></style>
+<style>
+.v-application--wrap {
+  min-height: 0;
+}
+</style>

@@ -23,3 +23,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.row + .row {
+  margin-top: 0px;
+}
+</style>

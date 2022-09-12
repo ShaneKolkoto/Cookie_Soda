@@ -73,7 +73,7 @@ export default {
           },
           {
             id: 4,
-            img: "/img/category/kid.jpgg",
+            img: "/img/category/kid.jpg",
             color: "black",
           },
         ],
@@ -324,8 +324,7 @@ export default {
         ],
       },
     ],
-    singleProduct: null,
-    topSalers: [],
+    product: null,
   },
   getters: {
     GET_PRODUCTS(state) {
@@ -358,5 +357,9 @@ export default {
       state.product = product;
     },
   },
-  actions: {},
+  actions: {
+    SET_PRODUCT(context, product) {
+      context.commit("SET_PRODUCT", product);
+    },
+  },
 };

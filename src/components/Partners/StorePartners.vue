@@ -1,7 +1,7 @@
 <template>
   <div class="mt-2">
     <span class="text-center font-weight-bold display-1"
-      ><p>Shop By Store</p></span
+      ><p class="mt-6">Shop By Store</p></span
     >
     <v-sheet class="" app max-height="100">
       <v-slide-group v-model="model" class="pa-2" mandatory>
