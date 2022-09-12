@@ -13,7 +13,7 @@
           :src="category.img[0].img"
         />
       </v-col>
-      <div class="underline"></div>
+      <hr />
     </v-row>
 
     <StoreView />
@@ -44,4 +44,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+hr {
+  width: 100%;
+}
+</style>
