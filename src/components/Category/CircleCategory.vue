@@ -1,18 +1,14 @@
 <template>
-  <v-row align="center" justify="center">
+  <v-row align="center" justify="center" class="mb-2">
     <v-slide-group v-model="model" class="pa-1 slider-group" center-active>
       <v-slide-item
         v-for="category in GET_CATEGORY"
         :key="category.id"
-        v-slot="{ active, toggle }"
+        v-slot="{ toggle }"
       >
         <v-row class="mx-4 mt-2">
           <div class="mx-auto d-flex flex-row">
-            <div
-              class="d-flex flex-column text-center"
-              :color="active ? undefined : 'blue lighten-1'"
-              @click="toggle"
-            >
+            <div class="d-flex flex-column text-center" @click="toggle">
               <v-avatar color="#877787" size="50"
                 ><v-img align="center" :src="category.img"></v-img>
               </v-avatar>
@@ -49,6 +45,6 @@ export default {
   border-radius: 50%;
 }
 .slider-group {
-  height: 80px;
+  height: 90px;
 }
 </style>

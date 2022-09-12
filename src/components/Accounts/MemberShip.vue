@@ -1,10 +1,10 @@
 <template>
   <!-- <v-container app fluid> -->
-  <v-btn width="100%" class="ma-1" plain>
+  <v-btn width="100%" class="d-flex" plain>
     <v-row style="background-color: purple" class="mt-2 mb-2">
-      <v-col cols="12">
+      <v-col cols="">
         <v-row align="center" justify="center">
-          <v-col cols="12" class="text-center text-uppercase">
+          <v-col cols="" class="text-center text-uppercase">
             <div class="white--text">Become A Member</div>
           </v-col>
         </v-row>
