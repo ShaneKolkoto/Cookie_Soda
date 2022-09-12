@@ -2,6 +2,7 @@ import Vue from "vue";
 import Vuex from "vuex";
 import VuexPersist from "vuex-persist";
 
+import pages from "./modules/Navigation/index";
 import user from "./modules/Users/index";
 import products from "./modules/Products/index";
 
@@ -14,8 +15,12 @@ const vuexLocalStorage = new VuexPersist({
 
 export default new Vuex.Store({
   modules: {
+    pages,
     user,
     products,
+  },
+  state: {
+    APP_VERSION: "1.0.0",
   },
   plugins: [vuexLocalStorage.plugin],
 });

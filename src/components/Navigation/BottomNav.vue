@@ -1,49 +1,44 @@
 <template>
-  <v-footer app bottom fixed padless>
+  <v-footer bottom fixed>
     <v-bottom-navigation v-model="value" app :background-color="color">
-      <router-link v-for="item in nav" :key="item.text" :to="item.to">
-        <v-btn value="home" height="100%" :color="color">
-          <span class="nav-text">{{ item.text }}</span>
-          <v-icon color="black">{{ item.icon }}</v-icon>
-        </v-btn>
-      </router-link>
+      <v-btn
+        value="home"
+        height="100%"
+        min-width="0"
+        :color="color"
+        @click="FETCH_PAGE(page)"
+        v-for="page in GET_PAGES"
+        :key="page.pageNo"
+      >
+        <span class="nav-text">{{ page.text }}</span>
+        <v-icon color="black">{{ page.icon }}</v-icon>
+      </v-btn>
     </v-bottom-navigation>
   </v-footer>
 </template>
 <script>
+import { mapActions, mapGetters } from "vuex";
 export default {
   data: () => ({
     value: "home",
-    color: "white accent-4",
-
-    nav: [
-      {
-        icon: "fa-duotone fa-house",
-        text: "home",
-        to: "/",
-      },
-      {
-        icon: "fa-light fa-cart-shopping",
-        text: "Shop",
-        to: "/shop",
-      },
-      {
-        icon: "fa-light fa-bag-shopping",
-        text: "Bag",
-        to: "/bag",
-      },
-      {
-        icon: "fa-light fa-user",
-        text: "Account",
-        to: "/account",
-      },
-      {
-        icon: "fa-solid fa-ellipsis",
-        text: "More",
-        to: "/more",
-      },
-    ],
+    color: "white accent-12",
+    pageName: null,
   }),
+  computed: {
+    ...mapGetters("pages", ["GET_PAGES", "GET_PAGE"]),
+  },
+  mounted() {
+    this.SET_PAGE(this.GET_PAGES, this.GET_PAGE);
+    this.pageName = this.GET_PAGE;
+  },
+  methods: {
+    ...mapActions("pages", ["FETCH_PAGE"]),
+    SET_PAGE(pages, page) {
+      if (!page) {
+        this.FETCH_PAGE(pages[0]);
+      }
+    },
+  },
 };
 </script>
 
